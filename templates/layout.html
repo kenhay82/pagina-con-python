@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/index.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/uikit-core.css') }}">
+    <title>Tu Vida Sin Enredos</title>
+</head>
+
+<body>
+    <nav class="uk-navbar-container" uk-sticky>
+        <div class="uk-container">
+            <div uk-navbar="">
+                <div class="uk-navbar">
+                    <a href="/"><img id="logo" src="{{ url_for('static', filename='assets/img/logopng.png') }}"
+                            alt=""></a>
+                    <ul class="uk-navbar-nav">
+                        <li>
+                            <a href="#">Servicios</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="#">Corte</a></li>
+                                    <li><a href="#">Definicion</a></li>
+                                    <li><a href="#">Tratamientos</a></li>
+                                    <li><a href="#">Coaching</a></li>
+                                    <li><a href="#">Alquimia</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/productos">Productos</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="#">Cuidado</a></li>
+                                    <li><a href="#">Reparación</a></li>
+                                    <li><a href="#">Definición</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#"><span uk-icon="cart"></span></a></li>
+                        <li><a href="#" uk-toggle="target: #login" type="button"><span uk-icon="user"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+    <script src="{{ url_for('static', filename='assets/js/uikit-icons.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/uikit.js') }}"></script>
+</body>
+
+</html>
