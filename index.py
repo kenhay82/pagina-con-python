@@ -12,4 +12,4 @@ def productos():
     return render_template('productos.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
